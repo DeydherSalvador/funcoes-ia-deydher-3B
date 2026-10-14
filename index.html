@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flamengo Q&A - Busca via DuckDuckGo</title>
+    <!-- Fonte Inter & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fundo Escuro Rubro-Negro -->
+    <div class="bg-overlay"></div>
+
+    <!-- Modal Principal 3D -->
+    <div class="modal-container">
+        
+        <!-- Badge 3D Interativo -->
+        <div class="flamengo-3d-badge" id="badge3d">
+            <div class="badge-inner">
+                <span class="badge-text">CRF</span>
+            </div>
+        </div>
+
+        <header class="modal-header">
+            <h1>MENGÃO <span class="highlight">Q&A</span></h1>
+            <p>Respostas em tempo real via DuckDuckGo</p>
+        </header>
+
+        <!-- Formulário de Pergunta -->
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input type="text" id="campoPergunta" placeholder="Ex: Quem é o maior artilheiro do Flamengo?" autocomplete="off">
+                <button id="btnPerguntar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Buscar</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Sugestões de Pesquisa -->
+        <div class="sugestoes-container">
+            <span class="sugestoes-label">Sugestões de busca:</span>
+            <div class="sugestoes-chips" id="caixaSugestoes">
+                <!-- Preenchido via JS -->
+            </div>
+        </div>
+
+        <!-- Card de Resposta -->
+        <div class="resposta-card" id="caixaResposta">
+            <div class="resposta-header">
+                <div class="status-tag" id="statusTag">
+                    <i class="fa-solid fa-circle-nodes"></i> DuckDuckGo API
+                </div>
+                <button id="btnVoz" class="btn-voz" title="Ouvir Resposta com IA">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <span>Ouvir com IA</span>
+                </button>
+            </div>
+            
+            <p id="textoResposta" class="texto-resposta"></p>
+
+            <div class="noticia-link-container" id="containerNoticia">
+                <a id="linkNoticia" href="#" target="_blank" class="noticia-link">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span>Ler notícia / fonte oficial da pesquisa</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square icon-arrow"></i>
+                </a>
+            </div>
+        </div>
+
+        <footer class="modal-footer">
+            <p>Integração direta com DuckDuckGo &bull; Nação Rubro-Negra 2026</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
